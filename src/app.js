@@ -46,7 +46,7 @@ const paintCanvas = new PaintCanvas({
   },
 });
 
-socket.on("DRAW_POINTS", (points, color) => {
+socket.on("DRAW_POINTS", ({points, color}) => {
   paintCanvas.drawLine(points, color)
 });
 
